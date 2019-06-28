@@ -12,8 +12,20 @@ setInterval(() => {
   newButton.textContent = 'CLICK ME';
   newCanvas.appendChild(newButton);
   newButton.classList.add('disrupt');
-
+  newButton.addEventListener('click', () => {
+    console.log('CLICKED');
+  });
   container.appendChild(newCanvas); 
+  
+
+  $('.canvas').on('mouseenter', function(e) {
+    var maxX = $(window).width() - $(this).width();
+    var maxY = $(window).height() - $(this).height();
+    $(this).css({
+      'left': getRandomInt(0, maxX),
+      'top': getRandomInt(0, maxY)
+    });
+  });
 }, 1000);
 
 
