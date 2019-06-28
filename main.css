@@ -1,0 +1,12 @@
+
+.canvas {
+  position: absolute;
+  border: 5px solid red;
+  height: 50px;
+  width: 50px;
+}
+
+.madness {
+  display: flex;
+  flex-wrap: wrap;
+}
